@@ -1,6 +1,6 @@
-NAME = Mapmaker
+NAME = MapMaker
 CC=g++
-CPPLIBS=-lsfml-graphics -lsfml-audio -lsfml-network -lsfml-window -lsfml-system
+CPPLIBS=-lSFGUI -framework sfml-graphics -framework sfml-audio -framework sfml-network -framework sfml-window -framework sfml-system
 #CPPFLAGS=
 
 ## Dependencies ##
