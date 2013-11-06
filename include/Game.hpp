@@ -26,6 +26,7 @@ private:
 	void										setStatePLAY();
 	void										setStateEXIT();
 public:
+												~Game();
 	Menu_return									menu();
 	Menu_return									game();
 };

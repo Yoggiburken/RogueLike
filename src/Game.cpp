@@ -2,6 +2,12 @@
 
 extern sf::RenderWindow app;
 
+
+Game::~Game()
+{
+	this->widgets.clear();
+}
+
 Menu_return Game::menu()
 {
 	this->menuInit();

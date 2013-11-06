@@ -8,10 +8,12 @@ private:
 	sf::Sprite			sprite;
 	bool				blocking;
 	bool				movable;
+	bool				destructible;
 public:
+						Tile(sf::Sprite& sprite, bool blocking, bool movable, bool destructible);
 	void				setSprite(sf::Sprite& sprite);
 	void				setPosition(sf::Vector2f position);
-	
+
 	bool				isBlocking();
 	bool				isMovable();
 	
