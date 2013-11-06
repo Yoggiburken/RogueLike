@@ -33,6 +33,7 @@ Menu_return Game::menu()
 
 bool Game::menuInit()
 {
+	this->widgets.clear();
 	this->setStateMENU();
 	sfg::Label::Ptr 	t_label(sfg::Label::Create("Menu"));
 	sfg::Button::Ptr 	t_button(sfg::Button::Create("Play!"));
@@ -45,12 +46,10 @@ bool Game::menuInit()
 						t_window->Add(t_box);
 						t_window->SetAllocation(sf::FloatRect(250, 200, 300, 200));
 						t_window->SetRequisition(sf::Vector2f(300, 200));
-	
 	this->widgets.insert(std::pair<std::string, sfg::Widget::Ptr>("Menu_label", t_label));
 	this->widgets.insert(std::pair<std::string, sfg::Widget::Ptr>("Menu_button", t_button));
 	this->widgets.insert(std::pair<std::string, sfg::Widget::Ptr>("Menu_box", t_box));
 	this->widgets.insert(std::pair<std::string, sfg::Widget::Ptr>("Menu_window", t_window));
-	
 	this->desktop.Add(t_window);
 	return true;
 }
@@ -63,6 +62,7 @@ Menu_return Game::game()
 
 bool Game::gameInit(std::string map_name)
 {
+	this->widgets.clear();
 	this->setStateEXIT();
 	return true;
 }
