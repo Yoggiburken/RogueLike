@@ -36,7 +36,7 @@ bool Game::menuInit()
 	this->setStateMENU();
 	sfg::Label::Ptr 	t_label(sfg::Label::Create("Menu"));
 	sfg::Button::Ptr 	t_button(sfg::Button::Create("Play!"));
-						t_button->GetSignal(sfg::Widget::OnLeftClick).Connect(&Game::setStateMENU(), this);
+						t_button->GetSignal(sfg::Widget::OnLeftClick).Connect(&Game::setStatePLAY, this);
 	sfg::Box::Ptr		t_box(sfg::Box::Create(sfg::Box::VERTICAL, 50.f));
 						t_box->Pack(t_label);
 						t_box->Pack(t_button, false, false);	
@@ -52,10 +52,32 @@ bool Game::menuInit()
 	this->widgets.insert(std::pair<std::string, sfg::Widget::Ptr>("Menu_window", t_window));
 	
 	this->desktop.Add(t_window);
+	return true;
 }
 
 Menu_return Game::game()
-{}
+{
+	this->gameInit(std::string(""));
+	return this->state;
+}
 
 bool Game::gameInit(std::string map_name)
-{}
+{
+	this->setStateEXIT();
+	return true;
+}
+
+void Game::setStateMENU()
+{
+	this->state = MENU;
+}
+
+void Game::setStatePLAY()
+{
+	this->state = PLAY;
+}
+
+void Game::setStateEXIT()
+{
+	this->state = EXIT;
+}
