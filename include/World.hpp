@@ -8,7 +8,8 @@ class World : public sf::Drawable {
 private:
 	std::vector<std::vector<std::vector<Tile*> > >	m_tilechunks;
 public:
-	bool 								load(std::string& mapname);
+	bool								saveToFile(std::string& mapname);
+	bool 								loadFromFile(std::string& mapname);
 	bool								generate(std::string& mapname);
 };
 #endif

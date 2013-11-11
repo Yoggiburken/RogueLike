@@ -1,6 +1,9 @@
 #include"../include/World.hpp"
 
-bool World::load(std::string& mapname)
+bool World::saveToFile(std::string& mapname)
+{}
+
+bool World::loadFromFile(std::string& mapname)
 {}
 
 bool World::generate(std::string& mapname)

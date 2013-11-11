@@ -1,7 +1,9 @@
 #include"../include/Game.hpp"
-
+#include"../include/TileBucket.hpp"
 
 sf::RenderWindow app(sf::VideoMode(800, 600), "RogueLike!");
+TileBucket tilebucket;
+
 
 int main()
 {
