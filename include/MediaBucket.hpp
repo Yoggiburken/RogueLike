@@ -34,6 +34,5 @@ public:
 	sf::Texture&							getTexture(std::string name);
 	sf::SoundBuffer&						getSoundBuffer(std::string name);
 	sf::Font&								getFont(std::string name);
-
 };
 #endif
