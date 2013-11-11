@@ -11,14 +11,14 @@ private:
 	//	Media
 	std::map<std::string, sf::Texture> 		textures;
 	std::map<std::string, sf::SoundBuffer>	soundbuffers;
-	std::mao<std::string, sf::Font>			fonts;
+	std::map<std::string, sf::Font>			fonts;
 
 	//	Media Names
 	std::vector<std::string> 				texture_names;
 	std::vector<std::string>				soundbuffer_names;
 	std::vector<std::string>				font_names;
 public:
-	bool									loadMedia(std::tring filename); 				//	Loads media with resource file
+	bool									loadMedia(std::string filename); 				//	Loads media with resource file
 	bool									loadTextureFromFile(std::string filename);		
 	bool									loadSoundBufferFromFile(std::string filename);
 	bool									loadFontFromFile(std::string filename);
