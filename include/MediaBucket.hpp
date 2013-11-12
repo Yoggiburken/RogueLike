@@ -18,7 +18,7 @@ private:
 	std::vector<std::string>				soundbuffer_names;
 	std::vector<std::string>				font_names;
 public:
-	bool									loadMedia(std::string filename); 				//	Loads media with resource file
+	void									loadMedia(std::string filename); 				//	Loads media with resource file
 	bool									loadTextureFromFile(std::string filename);		
 	bool									loadSoundBufferFromFile(std::string filename);
 	bool									loadFontFromFile(std::string filename);
