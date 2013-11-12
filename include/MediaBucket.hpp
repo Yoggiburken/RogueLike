@@ -23,16 +23,16 @@ public:
 	bool									loadSoundBufferFromFile(std::string filename);
 	bool									loadFontFromFile(std::string filename);
 
-	int										getNumberOfTextures();
-	int										getNumberOfSoundBuffers();
-	int										getNumberOfFonts();
+	int										getNumberOfTextures() 				const;
+	int										getNumberOfSoundBuffers() 			const;
+	int										getNumberOfFonts() 					const;
 
-	std::string&							getTextureName(int index);
-	std::string&							getSoundBufferName(int index);
-	std::string&							getFontName(int index);
+	std::string&							getTextureName(int index) 			const;
+	std::string&							getSoundBufferName(int index) 		const;
+	std::string&							getFontName(int index) 				const;
 
-	sf::Texture&							getTexture(std::string name);
-	sf::SoundBuffer&						getSoundBuffer(std::string name);
-	sf::Font&								getFont(std::string name);
+	sf::Texture&							getTexture(std::string name) 		const;
+	sf::SoundBuffer&						getSoundBuffer(std::string name) 	const;
+	sf::Font&								getFont(std::string name) 			const;
 };
 #endif
