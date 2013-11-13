@@ -23,6 +23,14 @@ public:
 	bool									loadSoundBufferFromFile(std::string filename);
 	bool									loadFontFromFile(std::string filename);
 
+	void									clearAll();
+	void									clearTextures();
+	void									clearSoundBuffers();
+	void									clearFonts();
+	bool									removeTexture(std::string name);
+	bool									removeSoundBuffer(std::string name);
+	bool									removeFont(std::string name);
+
 	int										getNumberOfTextures() 				const;
 	int										getNumberOfSoundBuffers() 			const;
 	int										getNumberOfFonts() 					const;
