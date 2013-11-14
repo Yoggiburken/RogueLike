@@ -11,9 +11,7 @@ Game::~Game()
 Menu_return Game::menu()
 {
 	this->menuInit();
-	
 	/*TEMP*/app.resetGLStates();/*TEMP*/
-	
 	while(app.isOpen())
 	{
 		while(app.pollEvent(this->event))

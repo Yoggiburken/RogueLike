@@ -13,10 +13,6 @@ private:
 	std::map<std::string, sf::SoundBuffer>	soundbuffers;
 	std::map<std::string, sf::Font>			fonts;
 
-	//	Media Names
-	std::vector<std::string> 				texture_names;
-	std::vector<std::string>				soundbuffer_names;
-	std::vector<std::string>				font_names;
 public:
 	void									loadMedia(std::string filename); 				//	Loads media with resource file
 	bool									loadTextureFromFile(std::string filename);		
@@ -27,20 +23,16 @@ public:
 	void									clearTextures();
 	void									clearSoundBuffers();
 	void									clearFonts();
-	bool									removeTexture(std::string name);
-	bool									removeSoundBuffer(std::string name);
-	bool									removeFont(std::string name);
+	void									removeTexture(std::string name);
+	void									removeSoundBuffer(std::string name);
+	void									removeFont(std::string name);
 
 	int										getNumberOfTextures() 				const;
 	int										getNumberOfSoundBuffers() 			const;
 	int										getNumberOfFonts() 					const;
 
-	std::string&							getTextureName(int index) 			const;
-	std::string&							getSoundBufferName(int index) 		const;
-	std::string&							getFontName(int index) 				const;
-
-	sf::Texture&							getTexture(std::string name) 		const;
-	sf::SoundBuffer&						getSoundBuffer(std::string name) 	const;
-	sf::Font&								getFont(std::string name) 			const;
+	sf::Texture&							getTexture(std::string name);
+	sf::SoundBuffer&						getSoundBuffer(std::string name);
+	sf::Font&								getFont(std::string name);
 };
 #endif
